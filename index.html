@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+  <html lang="PL">
+    <meta charset="UTF-8">
+     <head> 
+        <title> Letnie formularze </title> 
+     </head>
+     <body> 
+        <h1> inf_03_2025_06_01 </h1>
+        <h3> Dodaj nową grę </h3>
+     <form action="/dodaj-produkt" method="post" enctype="multipart/form-data">
+  <label for="nazwa">Nazwa:</label>
+  <input type="text" id="nazwa" name="nazwa" required>
+  <br><br>
+
+  <label for="opis">Opis:</label>
+  <textarea id="opis" name="opis"></textarea>
+  <br><br>
+
+  <label for="cena">Cena:</label>
+  <input type="number" id="cena" name="cena" step="0.01" required>
+  <br><br>
+
+  <label for="zdjecie">Zdjęcie:</label>
+  <input type="file" id="zdjecie" name="zdjecie" accept="image/*">
+  <br><br>
+
+  <button type="submit">DODAJ</button>
+</form>
+ <h1>inf_03_2025_06_04</h1>
+<form>
+    <form method="POST">
+        <label for="dane">Wprowadź dane:</label>
+        <input type="text" id="dane" name="dane" required>
+        <br><br>
+        <input type="submit" value="Wyślij">
+    </form>
+<h1>inf_03_2025_06_05</h1> 
+
+<h3>Zamówienie</h3><h3>Wybierz obraz </h3>
+<form>
+<label for="plik_obrazu">Etykieta Wybierz obraz:</label>
+<input type="file" id="plik_obrazu" name="plik_obrazu" accept="image/jpeg">
+
+<br>
+
+<label for="liczba_kopii">Liczba Kopii:</label>
+<input type="number" id="liczba_kopii" name="liczba_kopii" min="1">
+
+<br>
+
+<input type="radio" id="papier_blyszczacy" name="rodzaj_papieru" value="blyszczacy" checked>
+<label for="papier_blyszczacy">Papier błyszczący</label><br>
+
+<input type="radio" id="papier_matowy" name="rodzaj_papieru" value="matowy">
+<label for="papier_matowy">Papier matowy</label><br>
+
+<br>
+
+<button onclick="mojSkrypt()">Dodaj do koszyka</button>
+</form>
+
+    <h1>inf_03_2025_06_06</h1>   
+    <h2>Formularz Rezerwacji</h2>
+
+    <form action="" method="POST">
+        
+        <label for="gatunek_list">Wybierz gatunek:</label>
+      
+        <select name="gatunek" id="gatunek_list">
+       
+        </select>
+
+        <br><br>
+
+       
+        <button type="submit">Rezerwuj</button>
+
+    </form>
+    <h1>inf_03_2025_06_07</h1>
+    <label for="miejsce_wycieczki">Miejsce wycieczki</label>
+<div>
+    <select id="miejsce_wycieczki" name="miejsce_wycieczki" required>
+        
+        <option value="zwierzyniec">Zwierzyniec</option>
+        <option value="zamość">Zamość</option>
+        <option value="gdynia">Gdynia</option>
+    </select>
+</div>
+
+        <br>
+        <div>
+            <label for="ile_doroslych">Ile dorosłych?</label>
+            <input type="number" id="ile_doroslych" name="ile_doroslych" min="1" value="1" required>
+        </div>
+        <br>
+        <div>
+            <label for="ile_dzieci">Ile dzieci?</label>
+            <input type="number" id="ile_dzieci" name="ile_dzieci" min="0" value="0" required>
+        </div>
+        <br>
+        <div>
+            <label for="termin">Termin</label>
+            <input type="date" id="termin" name="termin" required>
+        </div>
+        <br>
+        <button type="submit">Symulacja ceny</button>
+      </form>
+ <h4>Koszt wycieczki</h4>  
+   </form>
+<h1>inf_03_2025_06_08</h1> 
+ <h3>Baza Smoków</h3>
+
+    <form action="" method="get">
+      
+        <select name="kraj">
+            <option value="bulgaria">Bułgaria</option>
+            <option value="polska">Polska</option>
+            <option value="chiny">Chiny</option>
+        </select>
+
+        <button type="submit">Szukaj</button>
+    </form>
+<h1>inf_03_2025_06_09</h1>
+ <h3>Dla klientów</h3>
+            <form class="klient-form" action="/search_firms" method="post">
+                <label for="min-employees">Ilu co najmniej pracowników potrzebujesz?</label>
+                    <input type="number" id="min-employees" name="min_employees" min="1" required>
+                    <button type="submit">Szukaj firm</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section contractor-section">
+            <h3>Dla wykonawców</h3>
+            <form class="wykonawca-form" action="/search_clients" method="post">
+                <select name="location" required>
+                    <option value="darlowo">Darłowo</option>
+                    <option value="warszawa">Warszawa</option>
+                    <option value="krakow">Kraków</option>
+                </select>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" id="malowanie" name="service" value="malowanie" required>
+                        <label for="malowanie">malowanie</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="gipsowanie" name="service" value="gipsowanie">
+                        <label for="gipsowanie">gipsowanie</label>
+                    </div>
+                </div>
+                <button type="submit">Szukaj klientów</button>
+            </form>
+      <h1>inf_03_2025_06_10</h1>
+      <h2>Zapisy na kursy</h2>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Imię</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="surname">Nazwisko</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Wiek</label>
+                <input type="number" id="age" name="age" min="1" max="120" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Rodzaj kursu</label>
+                <select id="course" name="course" required>
+                    <option value="angielski" selected>język angielski</option>
+                  
+                    <option value="niemiecki">język niemiecki</option>
+                    <option value="francuski">język francuski</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Dodaj dane</button>
+            </div>
+            
+            <div class="error-message">
+                Wprowadź wszystkie dane
+            </div>
+        </form>
+        <h1>inf_03_2025_06_02</h1>
+        <h2>Moje zadania</h2>
+        <div class="task-input-container">
+            <input type="text" placeholder="Dodaj zadanie">
+            <button type="button">Dodaj</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
